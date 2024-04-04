@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from streamlit_dynamic_filters import DynamicFilters
+#from streamlit_dynamic_filters import DynamicFilters
 
 st.set_page_config(page_title="Employee Salary Details",page_icon="💰",layout="centered")
 
