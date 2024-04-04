@@ -1,4 +1,4 @@
 Pandas
 Streamlit
 DynamicFilters
-treamlit_dynamic_filters
+Streamlit_dynamic_filters
