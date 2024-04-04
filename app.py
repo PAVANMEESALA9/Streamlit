@@ -10,15 +10,21 @@ def load_data():
 
 df = load_data()
 
+# Filter employees by name
+employee_name = st.selectbox('Select Employee Name', ['All'] + sorted(df['EmpName'].unique()))
+
+# Filter DataFrame based on selected employee name
+filtered_df = df if employee_name == 'All' else df[df['EmpName'] == employee_name]
+
 # Calculate the number of unique employees
-num_employees = df['EmpName'].nunique()
+num_employees = filtered_df['EmpName'].nunique()
 
 # Display title and metric
 st.title("Streamlit Example")
 st.metric(label="No. of Employees", value=num_employees)
 
 # Display the bar chart
-st.bar_chart(df['Salary'].groupby(df['EmpName']).sum())
+st.bar_chart(filtered_df['Salary'].groupby(filtered_df['EmpName']).sum())
 
 # Display the table
-st.table(df)
+st.table(filtered_df)
