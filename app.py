@@ -17,11 +17,11 @@ st.metric(label="No. of Employees", value=num_employees)
 # df_selection = df.query("Employee == @Empname")
 # st.dataframe(df_selection)
 
-#Dynamic filters
-dynamic_filters = DynamicFilters(df, filters=['EmpName'])
-dynamic_filters.display_filters()
-dynamic_filters.display_df()
-dynamic_filters.display_df
+# #Dynamic filters
+# dynamic_filters = DynamicFilters(df, filters=['EmpName'])
+# dynamic_filters.display_filters()
+# dynamic_filters.display_df()
+# dynamic_filters.display_df
 
 # Display the bar chart
 st.bar_chart(data=df, x='EmpName', y='Salary')
