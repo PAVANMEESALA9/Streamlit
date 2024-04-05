@@ -46,9 +46,9 @@ with left_:
     st.subheader("Employee Salary")
     chart_type_salary = st.radio("Select Chart Type", ["Bar Chart", "Line Chart"], key='chart_type_salary')
     if chart_type_salary == "Bar Chart":
-        st.bar_chart(data=df, x='EmpName', y='Salary')
+        st.bar_chart(data=df_selection, x='EmpName', y='Salary')
     elif chart_type_salary == "Line Chart":
-        st.line_chart(data=df, x='EmpName', y='Salary')
+        st.line_chart(data=df_selection, x='EmpName', y='Salary')
 with Right_:
     st.subheader("City Wise Employee Count")
     chart_type_employee_count = st.radio("Select Chart Type", ["Line Chart", "Bar Chart"], key='chart_type_employee_count')
